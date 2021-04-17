@@ -1,11 +1,5 @@
-let currency = new Map([
-    ["USD", 14000],
-    ["JPY", 131],
-    ["SGD", 11000],
-    ["MYR", 3500]
-]);
-console.log(currency);
+const power = (a, b, c, d) => {
+    return a + b + c + d;
+}
 
-const priceInJPY = 5000;
-let priceInIDR = priceInJPY * currency.get("JPY");
-console.log(priceInIDR);
+console.log(power(2, 2, 10, 5));
