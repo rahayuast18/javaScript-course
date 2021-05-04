@@ -1,15 +1,32 @@
-const books = [
-  { title: 'The Da Vinci Code', author: 'Dan Brown', sales: 5094805 },
-  { title: 'The Ghost', author: 'Robert Harris', sales: 807311 },
-  { title: 'White Teeth', author: 'Zadie Smith', sales: 815586 },
-  { title: 'Fifty Shades of Grey', author: 'E. L. James', sales: 3758936 },
-  { title: 'Jamie\'s Italy', author: 'Jamie Oliver', sales: 906968 },
-  { title: 'I Can Make You Thin', author: 'Paul McKenna', sales: 905086 },
-  { title: 'Harry Potter and the Deathly Hallows', author: 'J.K Rowling', sales: 4475152 },
-];
+class Animal {
+     constructor(name2, age2, isMammal2) {
+         this.name = name2;
+         this.age = age2;
+         this.isMammal = isMammal2;
+     }
+}
 
-const greatAuthors = (books.filter((book) => book.sales  > 1000000)).map((newBook) => {
-  return `${newBook.author} adalah penulis buku ${newBook.title} yang sangat hebat!`
-});
+class Rabbit extends Animal {
+    constructor(name, age) {
+        super(name, age, true);
+    }
+    eat() {
+        return `${this.name} sedang makan!`
+    }
+}
 
-console.log(greatAuthors);
+class Eagle extends Animal {
+    constructor(name, age) {
+        super(name, age, false);
+    }
+    fly() {
+        return `${this.name} sedang terbang!`
+    }
+}
+
+const myRabbit = new Rabbit("Labi", 2);
+const myEagle = new Eagle("Elo", 4);
+myRabbit.eat()
+myEagle.fly()
+console.log(myRabbit.eat());
+console.log(myEagle.fly());

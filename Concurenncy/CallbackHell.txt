@@ -1,0 +1,36 @@
+// Synchronous
+{
+    function makeACake(...rawIngredients) {
+        const ingredients = collectIngredients(rawIngredients);
+        dough = makeTheDough(ingredients);
+        pouredDough = pourDough(dough);
+        cake = bakeACake(pouredDough);
+        console.log(cake);
+    }
+}
+
+// Asynchronous
+{
+    function makeACake(...rawIngredients) {
+        collectIngredients(rawIngredients, function(ingredients) {
+            makeTheDough(ingredients, function(dough) {
+                pourDough(dough, function(pouredDough) {
+                    bakeACake(pourDough, function(cake) {
+                        console.log(cake);
+                    })
+                })
+            })
+        });
+    }
+}
+
+// Solusi Asynchronous dengan Promise
+{
+    function makeACake(...rawIngredients) {
+        collectIngredients(rawIngredients)
+            .then(makeTheDough)
+            .then(pourDough)
+            .then(bakeACake)
+            .then(console.log);
+    }
+}

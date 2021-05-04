@@ -2,9 +2,12 @@
   "name": "javascript",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "_comment1": "Tambahkan \"main\" : \"nama_file.js\" jika ingin ada file yg otomatis di run di awal sebagai index",
+  "_comment2": "Jika menggunakan file ES6Module/ES6File, tambahkan \"type\" : \"module\" pada packacge.json",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "_comment3": "Untuk run gunakan perintah npm run <name_script>",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "_comment4": "Tambahkan \"start\" : \"nama_file.js\" jika ingin ada file lain selain test yg akan di run"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/rahayuast18/javaScript-course/issues"
   },
-  "homepage": "https://github.com/rahayuast18/javaScript-course#readme"
+  "homepage": "https://github.com/rahayuast18/javaScript-course#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
